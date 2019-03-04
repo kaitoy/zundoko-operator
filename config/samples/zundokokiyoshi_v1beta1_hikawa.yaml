@@ -1,0 +1,8 @@
+apiVersion: zundokokiyoshi.kaitoy.github.com/v1beta1
+kind: Hikawa
+metadata:
+  labels:
+    controller-tools.k8s.io: "1.0"
+  name: hikawa-sample
+spec:
+  intervalMillis: 500

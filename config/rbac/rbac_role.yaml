@@ -1,0 +1,103 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  creationTimestamp: null
+  name: manager-role
+rules:
+- apiGroups:
+  - zundokokiyoshi.kaitoy.github.com
+  resources:
+  - hikawas
+  verbs:
+  - get
+  - list
+  - watch
+  - create
+  - update
+  - patch
+  - delete
+- apiGroups:
+  - zundokokiyoshi.kaitoy.github.com
+  resources:
+  - hikawas/status
+  verbs:
+  - get
+  - update
+  - patch
+- apiGroups:
+  - zundokokiyoshi.kaitoy.github.com
+  resources:
+  - zundokos
+  verbs:
+  - get
+  - list
+  - watch
+  - create
+  - update
+  - patch
+  - delete
+- apiGroups:
+  - zundokokiyoshi.kaitoy.github.com
+  resources:
+  - zundokos/status
+  verbs:
+  - get
+  - update
+  - patch
+- apiGroups:
+  - zundokokiyoshi.kaitoy.github.com
+  resources:
+  - kiyoshis
+  verbs:
+  - get
+  - list
+  - watch
+  - create
+  - update
+  - patch
+  - delete
+- apiGroups:
+  - zundokokiyoshi.kaitoy.github.com
+  resources:
+  - kiyoshis/status
+  verbs:
+  - get
+  - update
+  - patch
+- apiGroups:
+  - admissionregistration.k8s.io
+  resources:
+  - mutatingwebhookconfigurations
+  - validatingwebhookconfigurations
+  verbs:
+  - get
+  - list
+  - watch
+  - create
+  - update
+  - patch
+  - delete
+- apiGroups:
+  - ""
+  resources:
+  - secrets
+  verbs:
+  - get
+  - list
+  - watch
+  - create
+  - update
+  - patch
+  - delete
+- apiGroups:
+  - ""
+  resources:
+  - services
+  verbs:
+  - get
+  - list
+  - watch
+  - create
+  - update
+  - patch
+  - delete
